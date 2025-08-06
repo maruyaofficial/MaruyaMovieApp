@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(0, 0%, 0%);
+  --foreground: hsl(0, 0%, 100%);
+  --muted: hsl(0, 0%, 15%);
+  --muted-foreground: hsl(0, 0%, 53%);
+  --popover: hsl(0, 0%, 10%);
+  --popover-foreground: hsl(0, 0%, 98%);
+  --card: hsl(0, 0%, 10%);
+  --card-foreground: hsl(0, 0%, 98%);
+  --border: hsl(0, 0%, 27%);
+  --input: hsl(0, 0%, 15%);
+  --primary: hsl(187, 79%, 56%);
+  --primary-foreground: hsl(0, 0%, 0%);
+  --secondary: hsl(262, 100%, 44%);
+  --secondary-foreground: hsl(0, 0%, 98%);
+  --accent: hsl(0, 0%, 15%);
+  --accent-foreground: hsl(0, 0%, 98%);
+  --destructive: hsl(0, 62%, 60%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(187, 79%, 56%);
+  --radius: 0.5rem;
+  --surface: hsl(0, 0%, 10%);
+}
+
+.dark {
+  --background: hsl(0, 0%, 0%);
+  --foreground: hsl(0, 0%, 100%);
+  --muted: hsl(0, 0%, 15%);
+  --muted-foreground: hsl(0, 0%, 53%);
+  --popover: hsl(0, 0%, 10%);
+  --popover-foreground: hsl(0, 0%, 98%);
+  --card: hsl(0, 0%, 10%);
+  --card-foreground: hsl(0, 0%, 98%);
+  --border: hsl(0, 0%, 27%);
+  --input: hsl(0, 0%, 15%);
+  --primary: hsl(187, 79%, 56%);
+  --primary-foreground: hsl(0, 0%, 0%);
+  --secondary: hsl(262, 100%, 44%);
+  --secondary-foreground: hsl(0, 0%, 98%);
+  --accent: hsl(0, 0%, 15%);
+  --accent-foreground: hsl(0, 0%, 98%);
+  --destructive: hsl(0, 62%, 60%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(187, 79%, 56%);
+  --radius: 0.5rem;
+  --surface: hsl(0, 0%, 10%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Poppins', sans-serif;
+  }
+}
+
+@layer utilities {
+  .gradient-overlay {
+    background: linear-gradient(45deg, hsl(187, 79%, 56%), hsl(262, 100%, 44%));
+  }
+  
+  .glass-effect {
+    backdrop-filter: blur(10px);
+    background: hsla(0, 0%, 10%, 0.8);
+  }
+  
+  .video-controls {
+    background: linear-gradient(0deg, hsla(0, 0%, 0%, 0.8) 0%, transparent 100%);
+  }
+}
